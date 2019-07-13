@@ -1,0 +1,14 @@
+http://example.com {
+  timeouts none
+  redir https://example.com{url}
+}
+https://example.com
+{
+  root /etc/v2ray/pages
+  tls /etc/v2ray/pem.pem /etc/v2ray/key.key
+  proxy /cachefiles/eb910df8-58fa-41bc-844f-2de00c4e395a localhost:38678 {
+    websocket
+    header_upstream -Origin
+  }
+}
+ 
